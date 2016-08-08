@@ -1,0 +1,191 @@
+//SCSS
+
+//BOOTSTRAP CORE STYLES
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// FYD COLORS
+$red-black:     #260309;
+$red-darkest:   #750B1C;
+$red-darker:    #A80000;
+$red-dark:      #C50F1F;
+$red-accent:    #E81123;
+$red-light:     #E74856;
+$red-lighter:   #E6808A;
+$red-lightest:  #F4ABBA;
+
+
+// TEMPLATE COLORS
+$template-black:    $red-black;
+$template-darkest:  $red-darkest;
+$template-darker:   $red-darker;
+$template-dark:     $red-dark;
+$template-accent:   $red-accent;
+$template-light:    $red-light;
+$template-lighter:  $red-lighter;
+$template-lightest: $red-lightest;
+
+
+//STYLES
+body {
+    //min-width: 600px;
+    font-family: sans-serif;
+}
+
+#mainSearch {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 0px;
+    background: $template-dark;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
+
+    #mainInput {
+        display: block;
+        position: relative;
+        margin: auto;
+        background-color: #FAFAFA;
+        width: 86%;
+        max-width: 360px;
+        height: 40px;
+        border: none;
+        /* Sketch doesnt export gradient borders at this point */
+        /* Sketch doesnt export gradient borders at this point */
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+        border-radius: 4px;
+    }
+}
+
+#mainInput::-webkit-input-placeholder {
+    color: #808080;
+    text-align: center;
+    font-style: italic;
+}
+
+#mainInput:-moz-placeholder {
+    color: #808080;
+    text-align: center;
+    font-style: italic;
+}
+
+#mainInput::-moz-placeholder {
+    color: #808080;
+    text-align: center;
+    font-style: italic;
+}
+
+#mainInput:-ms-input-placeholder {
+    color: #808080;
+    text-align: center;
+    font-style: italic;
+}
+
+#videoCardContainer {
+    width: 100%;
+    background-color: #000000;
+    border-style: solid;
+    border-width: 1px 0px;
+    border-color: #000000;
+
+    #videoCard {
+        display: flex;
+        width: 100%;
+        height: 121px;
+
+        #videoThumbnail {
+            position: relative;
+            float: left;
+            width: 216px;
+            height: auto;
+            background-image: url('../images/2.jpeg');
+            background-size: cover;
+            background-position: center;
+
+            .imageProtectorTop {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                background-color: rgba(0, 0, 0, .36);
+            }
+
+            .imageProtectorBottom {
+                bottom: 0;
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 36px;
+                background-color: rgba(0, 0, 0, .36);
+            }
+
+        }
+
+        #videoInfo {
+            flex-grow: 1;
+            width: auto;
+            display: block;
+            position: relative;
+            padding: 20px 12px 0 12px;
+
+            .title {
+                font-weight: 300;
+                font-size: 18px;
+                color: #FAFAFA;
+                line-height: 22px;
+            }
+
+            .duration {
+                font-weight: 300;
+                font-size: 13px;
+                color: #B2B2B2;
+                line-height: 20px;
+            }
+        }
+
+        #cardActions {
+            height: 83px;
+            //background-color: orange;
+
+            #options {
+                background-image: url('../images/svg/optionsHorizontal-white.svg');
+                background-repeat: no-repeat;
+                background-position: center center;}
+
+            #download {
+                background-image: url('../images/svg/downloadCloud-white.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .button {
+                position: relative;
+                display: block;
+                width: 60px;
+                height: 60px;
+                border: none;
+                background-color: #1F1F1F;
+                margin-bottom: 1px;
+            }
+
+            .button:hover {}
+
+            .button:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+#downloads {
+    width: 100%;
+    min-height: 200px;
+    background-color: #FFFFFF;
+}
+
+#helperBar {
+    width: 100%;
+    min-height: 44px;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    background-color: #000000;
+}
